@@ -6,8 +6,8 @@ print(myvalues)
 rate = input("Current Exchange Rate of USD to Euros: ")
 amount = input("Amount to Exchange: ")
 
-rate = int(rate)
-amount = int(amount)
+rate = float(rate)
+amount = float(amount)
 total = amount*rate
 servicefee = 3.00
 result = total - servicefee
