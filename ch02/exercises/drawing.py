@@ -4,7 +4,7 @@ window = turtle.Screen()
 CIRCLE_DEGREES = 360
 superturtlev2 = turtle.Turtle()
 
-turtle_color = str(input("Color of shape: "))
+turtle_color = str(input("Color of shape (does not accept [R,G,B], accepts strings (i.e. red, maroon, purple, etc)): "))
 superturtlev2.color(turtle_color)
 
 num_sides = int(input("Enter the number of sides: "))
