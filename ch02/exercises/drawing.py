@@ -3,7 +3,9 @@ import turtle
 window = turtle.Screen()
 CIRCLE_DEGREES = 360
 superturtlev2 = turtle.Turtle()
-superturtlev2.color("red")
+
+turtle_color = str(input("Color of shape: "))
+superturtlev2.color(turtle_color)
 
 num_sides = int(input("Enter the number of sides: "))
 angle = CIRCLE_DEGREES / num_sides
