@@ -45,8 +45,6 @@ leonardo.goto(-100, -20)
 pygame.init()
 pygamewindow = pygame.display.set_mode()
 
-coords = []
-num_sides = []
 
 
 window.exitonclick()
