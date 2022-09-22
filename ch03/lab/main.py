@@ -62,7 +62,9 @@ def labshapedraw(numsideshape):
   pygame.draw.polygon(pygamewindow, goodcolor , coords)
   pygame.display.flip()
   pygame.time.wait(1500)
-  pygamewindow.fill("Black")
+  pygamewindow.fill((0,0,0))
+  pygame.display.flip()
+  pygame.time.wait(1000)
 
 EQUILATERAL_TRIANGLE_SIDES = 3
 SQUARE_SIDES = 4
