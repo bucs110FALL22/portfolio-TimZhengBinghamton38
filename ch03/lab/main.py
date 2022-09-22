@@ -44,9 +44,8 @@ leonardo.goto(-100, -20)
 # PART B - complete part B here
 pygame.init()
 pygamewindow = pygame.display.set_mode(size=(800, 800))
-drawsurface = pygamewindow.blit(pygamewindow, (0,0))
+pygamewindow.fill([0,0,0])
 print(pygamewindow)
-print(drawsurface)
 coords=[]
 num_sides = 3
 side_length = 10
@@ -56,12 +55,17 @@ for i in range(num_sides):
   theta = ((2.0 * math.pi * i)/ num_sides)
   x = side_length * math.cos(theta) + offset
   y = side_length * math.sin(theta) + offset
-  coords[i:i] = (x,y)
-  pygamewindow.draw.polygon(drawsurface, pygame.color(255, 0, 100) , coords,)
-  pygame.display.flip()
-  pygame.time.wait(1000)
-  pygamewindow.fill("Black")
-
+  y = float(y)
+  x = float(x)
+  coords.append((x,y))
+  print(type((x,y)))
+  print(type(coords))
+  print(coords)
 print(coords)
+pygame.draw.polygon(pygamewindow, pygame.color(255, 0, 100) , coords)
+pygame.display.flip()
+pygame.time.wait(1000)
+pygamewindow.fill("Black")
+
 
 window.exitonclick()
