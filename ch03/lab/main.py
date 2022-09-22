@@ -45,7 +45,7 @@ leonardo.goto(-100, -20)
 pygame.init()
 pygamewindow = pygame.display.set_mode(size=(160, 160))
 pygamewindow.fill([0,0,0])
-
+goodcolor = (6, 118, 138, 1)
 def labshapedraw(numsideshape):
   coords=[]
   num_sides = numsideshape
@@ -59,7 +59,7 @@ def labshapedraw(numsideshape):
     y = float(y)
     x = float(x)
     coords.append((x,y))
-  pygame.draw.polygon(pygamewindow, (6, 118, 138, 1) , coords)
+  pygame.draw.polygon(pygamewindow, goodcolor , coords)
   pygame.display.flip()
   pygame.time.wait(1500)
   pygamewindow.fill("Black")
