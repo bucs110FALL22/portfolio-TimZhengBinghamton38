@@ -1,4 +1,4 @@
-from sys import platlibdir
+
 import pygame
 import random
 import math
