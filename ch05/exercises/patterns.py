@@ -10,7 +10,7 @@ def star_pyramid():
 star_pyramid()
 
 def rstar_pyramid():
-    layernumber = int(input("Input hte number of layers the inverted pyramid has: "))
+    layernumber = int(input("Input the number of layers the inverted pyramid has: "))
     pyramidmaterial = str("*")
 
     layerorder = range(1, layernumber + 1)
