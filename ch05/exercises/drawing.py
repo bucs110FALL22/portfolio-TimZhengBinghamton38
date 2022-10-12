@@ -13,6 +13,8 @@ input_length = int(input("Enter the length of the sides: "))
 
 
 functionturtle = turtle.Turtle()
+functionturtle.shape("turtle")
+functionturtle.color("green")
 drawEqShape(functionturtle, input_sides, input_length)
 
 icanseething.exitonclick()
