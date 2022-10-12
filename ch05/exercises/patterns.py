@@ -1,16 +1,14 @@
 
 #the reason for layernumber + 1 is to ensure the amount of layers is correct in terms of humans
+layernumber = int(input("Input the number of layers the pyramid has: "))
+
 def star_pyramid():
-    layernumber = int(input("Input the number of layers the pyramid has: "))
     pyramidmaterial = str("*")
 
     for i in range(1, layernumber + 1):
         print(pyramidmaterial*i)
 
-star_pyramid()
-
 def rstar_pyramid():
-    layernumber = int(input("Input the number of layers the inverted pyramid has: "))
     pyramidmaterial = str("*")
 
     layerorder = range(1, layernumber + 1)
@@ -18,5 +16,6 @@ def rstar_pyramid():
     for i in layerorder:
         print(pyramidmaterial*i)
 
+star_pyramid()
 rstar_pyramid()
     
