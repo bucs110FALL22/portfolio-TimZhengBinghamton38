@@ -6,6 +6,8 @@ def drawEqShape(myturtle=None,num_sides = 0, side_length=0):
         myturtle.forward(side_length)
         myturtle.left(angle)
 
+icanseething = turtle.Screen()
+
 input_sides = int(input("Enter the number of sides: "))
 input_length = int(input("Enter the length of the sides: "))
 
@@ -13,3 +15,4 @@ input_length = int(input("Enter the length of the sides: "))
 functionturtle = turtle.Turtle()
 drawEqShape(functionturtle, input_sides, input_length)
 
+icanseething.exitonclick()
