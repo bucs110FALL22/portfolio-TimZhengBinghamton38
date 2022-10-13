@@ -4,7 +4,6 @@ import pygame
 
 pygame.init()
 graphscreen = pygame.display.set_mode((512,512))
-font = pygame.font.Font(None, 24)
 iters = {}
 upper_limit = 20
 max_so_far = 0
@@ -15,6 +14,7 @@ for i in range(2,upper_limit +1):
     count = 0
     print("Test Value:",inputvalue)
     graphscreen.fill([0,0,0])
+    font = pygame.font.Font(None, 24)
     while inputvalue !=1:
         if inputvalue%2 == 0:
             inputvalue = inputvalue/2
@@ -37,10 +37,12 @@ for i in range(2,upper_limit +1):
     if count >= max_so_far:
         max_so_far = count
         max_val = i
-        msgsetup = str((max_val,max_so_far))
-        print(msgsetup)
-        msg = font.render("Value that caused the highest iterations so far:" + msgsetup, True, [0,0,255], None)
-        graphscreen.blit(msg,(10,10))
+    msgsetup = str((max_val,max_so_far))
+    print(msgsetup)
+    msg = font.render("Value that caused the highest iterations so far:" + msgsetup, True, [0,0,255], None)
+    graphscreen.blit(msg,(10,10))
+    pygame.display.flip()
+    pygame.time.wait(1000)
 print(max_val, max_so_far)
 
 
