@@ -3,9 +3,9 @@ from unittest import skip
 import pygame
 
 pygame.init()
-graphscreen = pygame.display.set_mode((512,512))
+graphscreen = pygame.display.set_mode()
 iters = {}
-upper_limit = 20
+upper_limit = 50
 max_so_far = 0
 max_val = 0
 scale = 5
@@ -13,7 +13,6 @@ scale = 5
 for i in range(2,upper_limit +1):
     inputvalue = i
     count = 0
-    print("Test Value:",inputvalue)
     font = pygame.font.Font(None, 24)
     while inputvalue !=1:
         if inputvalue%2 == 0:
@@ -26,7 +25,6 @@ for i in range(2,upper_limit +1):
             break
     iters[i] = count
     coords = [(x*scale,y*scale) for x, y in iters.items()] # This defines tuple (x,y) as the dict pair (key,value) - i.e. converts dict of tuples into a list of tuple coordinates
-    print(coords)
     if coords.__len__() >= 2:
         pygame.draw.lines(graphscreen, [0,0,255], False, coords)
         new_graph = pygame.transform.flip(graphscreen, False, True)
@@ -40,7 +38,3 @@ for i in range(2,upper_limit +1):
     pygame.display.flip()
     pygame.time.wait(1000)
     graphscreen.fill([0,0,0])
-print(max_val, max_so_far)
-
-
-print(iters)
