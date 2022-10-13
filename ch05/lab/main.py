@@ -3,9 +3,9 @@ from unittest import skip
 import pygame
 
 pygame.init()
-graphscreen = pygame.display.set_mode()
+graphscreen = pygame.display.set_mode((512,512))
 iters = {}
-upper_limit = 50
+upper_limit = 20
 max_so_far = 0
 max_val = 0
 scale = 5
