@@ -8,6 +8,7 @@ iters = {}
 upper_limit = 20
 max_so_far = 0
 max_val = 0
+scale = 5
 #the upper_limit +1 is to make range() include 20, so it evaluates from 2-20 inclusively
 for i in range(2,upper_limit +1):
     inputvalue = i
@@ -24,7 +25,6 @@ for i in range(2,upper_limit +1):
         elif inputvalue ==1:
             break
     iters[i] = count
-    scale = 5
     coords = [(x*scale,y*scale) for x, y in iters.items()] # This defines tuple (x,y) as the dict pair (key,value) - i.e. converts dict of tuples into a list of tuple coordinates
     print(coords)
     if coords.__len__() >= 2:
@@ -35,7 +35,6 @@ for i in range(2,upper_limit +1):
         max_so_far = count
         max_val = i
     msgsetup = str((max_val,max_so_far))
-    print(msgsetup)
     msg = font.render("Value that caused the highest iterations so far:" + msgsetup, True, [0,0,255], None)
     graphscreen.blit(msg,(10,10))
     pygame.display.flip()
