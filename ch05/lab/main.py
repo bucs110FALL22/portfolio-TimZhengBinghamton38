@@ -24,12 +24,22 @@ for i in range(2,upper_limit +1):
         elif inputvalue ==1:
             break
     iters[i] = count
-    coords = [(x,y) for x, y in iters.items()] # This defines tuple (x,y) as the dict pair (key,value) - i.e. converts dict of tuples into a list of tuple coordinates
+    scale = 5
+    coords = [(x*scale,y*scale) for x, y in iters.items()] # This defines tuple (x,y) as the dict pair (key,value) - i.e. converts dict of tuples into a list of tuple coordinates
     print(coords)
-    print(type(coords))
+    if coords.__len__() >= 2:
+        pygame.draw.lines(graphscreen, [0,0,255], False, coords)
+        new_graph = pygame.transform.flip(graphscreen, False, True)
+        graphscreen.blit(new_graph, (0,0))
+        pygame.display.flip()
+        pygame.time.wait(1000)
     if count >= max_so_far:
         max_so_far = count
         max_val = i
+        msgsetup = str((max_val,max_so_far))
+        print(msgsetup)
+        msg = font.render("Value that caused the highest iterations so far:" + msgsetup, True, [0,0,255], None)
+        graphscreen.blit(msg,(10,10))
 print(max_val, max_so_far)
 
 
