@@ -34,7 +34,7 @@ for i in range(2,upper_limit +1):
         max_val = i
     msgsetup = str((max_val,max_so_far))
     msg = font.render("Value that caused the highest iterations so far:" + msgsetup, True, [0,0,255], None)
-    graphscreen.blit(msg,(10,10))
+    graphscreen.blit(msg,(10,10)) #(10,10) is the offset for the text so it doesn't appear at the exact corner of the screen, for asthetic purposes
     pygame.display.flip()
     pygame.time.wait(1000)
     graphscreen.fill([0,0,0])
