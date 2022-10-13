@@ -14,6 +14,7 @@ for i in range(2,upper_limit +1):
     inputvalue = i
     count = 0
     print("Test Value:",inputvalue)
+    graphscreen.fill([0,0,0])
     while inputvalue !=1:
         if inputvalue%2 == 0:
             inputvalue = inputvalue/2
