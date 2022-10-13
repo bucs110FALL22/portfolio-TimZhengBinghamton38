@@ -13,7 +13,6 @@ for i in range(2,upper_limit +1):
     inputvalue = i
     count = 0
     print("Test Value:",inputvalue)
-    graphscreen.fill([0,0,0])
     font = pygame.font.Font(None, 24)
     while inputvalue !=1:
         if inputvalue%2 == 0:
@@ -32,8 +31,6 @@ for i in range(2,upper_limit +1):
         pygame.draw.lines(graphscreen, [0,0,255], False, coords)
         new_graph = pygame.transform.flip(graphscreen, False, True)
         graphscreen.blit(new_graph, (0,0))
-        pygame.display.flip()
-        pygame.time.wait(1000)
     if count >= max_so_far:
         max_so_far = count
         max_val = i
@@ -43,6 +40,7 @@ for i in range(2,upper_limit +1):
     graphscreen.blit(msg,(10,10))
     pygame.display.flip()
     pygame.time.wait(1000)
+    graphscreen.fill([0,0,0])
 print(max_val, max_so_far)
 
 
