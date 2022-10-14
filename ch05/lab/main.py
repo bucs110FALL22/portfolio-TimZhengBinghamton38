@@ -24,6 +24,7 @@ for i in range(2,upper_limit +1):
         elif inputvalue ==1:
             break
     iters[i] = count
+    print("Dictionary of values, and the amount of times the loop ran for that value:", iters)
     coords = [(x*scale,y*scale) for x, y in iters.items()] # This defines tuple (x,y) as the dict pair (key,value) - i.e. converts dict of tuples into a list of tuple coordinates
     if coords.__len__() >= 2:
         pygame.draw.lines(graphscreen, [0,0,255], False, coords)
@@ -32,8 +33,8 @@ for i in range(2,upper_limit +1):
     if count >= max_so_far:
         max_so_far = count
         max_val = i
-    msgsetup = str((max_val,max_so_far))
-    msg = font.render("Value that caused the highest iterations so far:" + msgsetup, True, [0,0,255], None)
+    msgsetup = str(max_so_far)
+    msg = font.render("Highest amount of loops so far: "+msgsetup+" times", True, [0,0,255], None)
     graphscreen.blit(msg,(10,10)) #(10,10) is the offset for the text so it doesn't appear at the exact corner of the screen, for asthetic purposes
     pygame.display.flip()
     pygame.time.wait(1000)
