@@ -11,23 +11,24 @@ def percentage_to_letter(score = 0):
         lettergrade = "D"
     elif 60 > score:
         lettergrade = "F"
-    print(lettergrade)
-    return str(lettergrade)
+    return lettergrade
 
 def is_passing(letter = None):
-    if letter == "A" or "B" or "C":
-        final_result = True
-    else:
-        final_result = False
-    print(final_result)
-    return final_result
-
-
+    if letter == "A":
+        return True
+    elif letter == "B":
+        return True
+    elif letter == "C":
+        return True
+    elif letter == "D" or "F":
+        return False
 grade_input = float(input("Input your grade: "))
 converted_grade = percentage_to_letter(grade_input)
+converted_grade = str(converted_grade)
 print("Letter grade:",converted_grade)
+print("T/F value of is_passing() function:",is_passing(converted_grade))
 
-if is_passing(converted_grade) == True:
-    print("Pass")
-elif is_passing(converted_grade) == False:
+if is_passing(converted_grade) == False:
     print("Fail")
+else:
+    print("Pass")
