@@ -28,7 +28,7 @@ Also allows for setting the lower and upper bounds of calculation
 args: lowerbound, upperbound, resolution
 result: a list of angles for the r(theta) function to use in its computations
 """
-def get_list_of_angles_for_polar_coords(lowerbound = 0,upperbound = math.tau, resolution = 0.01):
+def get_list_of_angles_for_polar_coords(lowerbound = 0,upperbound = math.pi, resolution = 0.01):
     return numpy.arange(lowerbound,upperbound,resolution)
 
 
