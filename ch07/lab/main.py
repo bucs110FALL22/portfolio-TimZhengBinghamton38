@@ -1,10 +1,10 @@
 import Rectangle
 import Surface
 
-"""
-Driver function to test if the Rectangle and Surface classes were implemented correctly
-"""
 def main():
+    """
+    Driver function to test if the Rectangle and Surface classes were implemented correctly
+    """
     r = Rectangle.Rectangle(10, 10, 10, 10)
     assert((r.x, r.y, r.height, r.width) == (10,10,10,10))
     r = Rectangle.Rectangle(-1, 1, 1, 1)
