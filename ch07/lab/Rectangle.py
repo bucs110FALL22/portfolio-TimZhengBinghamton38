@@ -9,7 +9,7 @@ class Rectangle:
         self.y = y
         self.height = height
         self.width = width
-        #the check for negatives - there should be a better way of doing this
+        #this is actually the easiest way to check for negatives, though I would much like it to be shorter
         if self.x <0:
             self.x = 0
             print("A negative x value was set to 0")
