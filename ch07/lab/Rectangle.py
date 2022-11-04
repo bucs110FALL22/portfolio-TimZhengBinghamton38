@@ -1,7 +1,7 @@
 class Rectangle:
     def __init__(self,x = 0,y = 0,height = 0,width = 0) -> None:
         """
-        This initializes the Rectangle object (x,y,height,width) set to zero if not defined
+        This initializes the Rectangle object (x,y,height,width) set to zero if not defined, also sets to 0 if a negative is entered
         args: self, x, y, height, width
         return: None
         """
@@ -9,7 +9,7 @@ class Rectangle:
         self.y = y
         self.height = height
         self.width = width
-        #its repetitive >.<
+        #the check for negatives - there should be a better way of doing this
         if self.x <0:
             self.x = 0
             print("A negative x value was set to 0")
