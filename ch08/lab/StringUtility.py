@@ -1,5 +1,3 @@
-
-
 class StringUtility:
     def __init__(self,string):
         self.original_string = str(string)
@@ -85,6 +83,7 @@ class StringUtility:
                 secretstring += chr(32)
             else:
                 secretlettervalue = (ord(self.original_string[i]) + increment)
+                print(secretlettervalue)
                 # there are 26 letters in the english alphabet, and 90 and 122 are the values for Z and z respectively - unless ASCII changes this doesn't change
                 if secretlettervalue > ord("z"):
                     newletter = secretlettervalue - 26
