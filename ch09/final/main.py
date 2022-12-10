@@ -1,5 +1,4 @@
 import Quotetrivianew
-import sys
 
 def main():
     game = Quotetrivianew.Quotetrivia()
