@@ -7,6 +7,9 @@ Three names are given as hints/decoys (one is the answer), though players may ch
 
 ## KNOWN BUGS AND INCOMPLETE PARTS *(list any known bugs or non-working parts)*
 
+For quotes whose authors have one name (e.g. not in the form firstname, lastname) the other two names do not adjust,
+allowing for easier wins
+
 ## REFERENCES *(any resources you use outside of class materials)*
 
 Fakerapi and its documentation (<https://fakerapi.it/en>)
