@@ -1,17 +1,11 @@
-import techyproxy
-import fakenameproxy
+import Quotetrivianew
+import sys
 
 def main():
-    techapi = techyproxy.Techyquoteapi()
-    fakeapi = fakenameproxy.Fakenameapi()
-    quote = techapi.get()
-    name = fakeapi.get()
-    print(name)
-    city = fakeapi.get_location()
-    print(city)
-    # personsaid = name + " says:"
-    # print(personsaid)
-    # newquote = '"' + quote + '"'
-    # print(newquote)
-
+    game = Quotetrivianew.Quotetrivia()
+    state = game.triviagameloop()
+    while True:
+        if state == "Fail":
+            game.triviagameloop()
+ 
 main()

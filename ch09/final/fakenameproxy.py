@@ -20,7 +20,10 @@ class Fakenameapi:
         name = firstname +" " +lastname
         return name
     
-    def get_location(self):
-        location_data = self.processed_request.get("address")
-        city = location_data.get("city")
-        return city
+    # def get_location(self):
+    #     location_data = self.processed_request.get("address")
+    #     city = location_data.get("city")
+    #     return city
+
+    def __str__(self) -> str:
+        return self.api_url
