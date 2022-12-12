@@ -31,10 +31,10 @@ class Quotetrivia:
             print(string)
         answer = input("You think the author is: ")
         if answer == author:
-            print(f"Pass! The author is indeed {author}")
+            print(f"\nPass! The author is indeed {author}")
             exit()
         elif answer != author:
-            print(f"Fail! The author was {author} \n")
+            print(f"\nFail! The author was {author} \n")
             if answer not in namelist:
-                print("That wasn't even a choice \n")
+                print("That wasn't even a choice/A typo has been made \n Regardless, it is still a fail. \n")
             return "Fail"

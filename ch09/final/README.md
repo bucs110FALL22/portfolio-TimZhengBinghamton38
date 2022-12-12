@@ -13,6 +13,7 @@ Authors whose names are not formatted as *firstname* *lastname* appear more obvi
 Unable to limit answers given to names listed (user an input any string).
 
 If a name has characters not on a standard US keyboard, it is difficult to type.
+
 ## REFERENCES *(any resources you use outside of class materials)*
 
 Fakerapi and its documentation (<https://fakerapi.it/en>)
